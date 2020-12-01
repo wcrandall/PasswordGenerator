@@ -47,6 +47,7 @@ export class AppComponent {
     changedTo = changedTo.trim(); 
     if(changedTo == "")
     {
+        this.length = 0; 
       return; 
     }
     let changedToConverted = Number(changedTo); 
@@ -55,7 +56,8 @@ export class AppComponent {
       this.length = Number(changedTo); 
     }
     else{
-      //document.getElementById('length').value = "";
+       this.length = 0; 
+       (<HTMLInputElement>event.target).value = '';
       alert("please enter a number that is greater than 0");
     }
   }
