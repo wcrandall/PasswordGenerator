@@ -13,14 +13,6 @@ export class AppComponent {
   useSymbols = false; 
 
   onButtonClick(){
-    if(!this.useSymbols && !this.useLetters && !this.useNumbers)
-    {
-      return;
-    }
-    if(this.length < 1)
-    {
-      return; 
-    }
     let validChars = ''; 
     let tempPasswordHold = ''; 
     if(this.useLetters)
